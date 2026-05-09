@@ -1,0 +1,38 @@
+# Maven
+/target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# SQLite database
+*.db
+*.db-journal
+
+# Java
+*.class
+target/
+out/
+src/out/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+javafx-sdk-*/
+lib/
