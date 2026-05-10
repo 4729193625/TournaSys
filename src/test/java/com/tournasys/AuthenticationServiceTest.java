@@ -18,11 +18,11 @@ public class AuthenticationServiceTest {
 
         AuthenticationService authService = new AuthenticationService();
 
-        String username = "testuser_" + System.currentTimeMillis();
+        String username = "manager1";
 
-        authService.register(username, "1234", "manager");
+        authService.register(username, "Test12345.", "manager");
 
-        User user = authService.login(username, "1234");
+        User user = authService.login(username, "Test12345.");
 
         assertNotNull(user);
         assertEquals(username, user.getUsername());
@@ -35,9 +35,9 @@ public class AuthenticationServiceTest {
 
         AuthenticationService authService = new AuthenticationService();
 
-        String username = "wrongpass_" + System.currentTimeMillis();
+        String username = "wrongpass_";
 
-        authService.register(username, "1234", "player");
+        authService.register(username, "Test1234.", "player");
 
         assertThrows(AuthenticationException.class, () ->
                 authService.login(username, "wrong-password")
@@ -50,12 +50,12 @@ public class AuthenticationServiceTest {
 
         AuthenticationService authService = new AuthenticationService();
 
-        String username = "duplicate_" + System.currentTimeMillis();
+        String username = "duplicate1_";
 
-        authService.register(username, "1234", "manager");
+        authService.register(username, "Test12345.", "manager");
 
         assertThrows(IllegalArgumentException.class, () ->
-                authService.register(username, "1234", "manager")
+                authService.register(username, "Test12345.", "manager")
         );
     }
 }

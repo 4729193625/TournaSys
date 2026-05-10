@@ -1,88 +1,63 @@
-# Responsibility Map
+This project was divided according to the responsibilities assigned to each team member.
 
-This project was divided according to the responsibilities assigned to each team member.  
-Each folder inside `TournaSys_Member_Responsibilities` contains the files mainly related to that member’s tasks.
+## Berke Koyuncu GUI JavaFX UI Integration
 
----
+- `src/main/java/com/tournasys/app/MainApp.java`
+- `src/main/java/com/tournasys/config/DatabaseConnection.java`
+- `src/main/java/com/tournasys/controller/DashboardController.java`
+- `src/main/java/com/tournasys/controller/NavbarController.java`
+- `src/main/java/com/tournasys/util/SceneManager.java`
+- `src/main/java/com/tournasys/controller/* - correction and verification -`
+- `src/main/resources/com/tournasys/css/app.css`
+- `src/main/resources/com/tournasys/fxml/*`
+- `src/main/resources/com/tournasys/ico/*`
+- `Final correction and verification in whole project.`
 
-## Member Responsibilities
+## Muhammed Taha Eren Match Scheduling Score Standings
 
-### Berke Koyuncu
-**Responsibilities:** GUI Design, JavaFX Implementation, UI Integration
+- `src/main/java/com/tournasys/controller/MatchController.java`
+- `src/main/java/com/tournasys/controller/StandingsController.java`
+- `src/main/java/com/tournasys/controller/BracketController.java`
+- `src/main/java/com/tournasys/interfaces/Schedulable.java`
+- `src/main/java/com/tournasys/interfaces/Scorable.java`
+- `src/main/java/com/tournasys/model/Match.java`
+- `src/main/java/com/tournasys/model/Standings.java`
+- `src/main/java/com/tournasys/model/StandingRow.java`
+- `src/main/java/com/tournasys/repository/MatchRepository.java`
+- `src/main/java/com/tournasys/repository/StandingsRepository.java`
+- `src/main/java/com/tournasys/service/MatchService.java`
+- `src/main/java/com/tournasys/service/StandingsService.java`
 
-**Assigned Areas**
-- JavaFX UI screens
-- FXML files
-- CSS styling
-- Scene navigation
-- UI controllers
-- User interface integration
+## Yago Rodriguez de Pauli User Authentication Role Management
 
-**Typical Files**
-- `src/main/resources/**/*.fxml`
-- `src/main/resources/**/*.css`
-- UI-related controllers
-- JavaFX visual components
-- Repository Folder
+- `src/main/java/com/tournasys/controller/LoginController.java`
+- `src/main/java/com/tournasys/controller/RegisterController.java`
+- `src/main/java/com/tournasys/exception/AuthenticationException.java`
+- `src/main/java/com/tournasys/interfaces/Authenticatable.java`
+- `src/main/java/com/tournasys/model/User.java`
+- `src/main/java/com/tournasys/model/Manager.java`
+- `src/main/java/com/tournasys/model/Player.java`
+- `src/main/java/com/tournasys/repository/UserRepository.java`
+- `src/main/java/com/tournasys/service/AuthenticationService.java`
+- `src/main/java/com/tournasys/util/SessionManager.java`
 
----
+## Yunus Gedik Tournament Team Management
 
-### Muhammed Taha Eren
-**Responsibilities:** Match Scheduling, Score Tracking, Standings
-
-**Assigned Areas**
-- Match generation logic
-- Scheduling system
-- Score management
-- League standings calculations
-- Match result processing
-
-**Typical Files**
-- Match services
-- Score services
-- Standings logic
-- Fixture generation classes
-- Match-related models
-
----
-
-### Yago Rodríguez de Pauli
-**Responsibilities:** User Authentication and Role Management
-
-**Assigned Areas**
-- Login/Register systems
-- Authentication logic
-- User management
-- Role permissions
-- Session handling
-- Security-related functionality
-
-**Typical Files**
-- Authentication services
-- Login controllers
-- Role management classes
-- Security utilities
-
----
-
-### Yunus Gedik
-**Responsibilities:** Tournament and Team Management
-
-**Assigned Areas**
-- Tournament creation and management
-- Team management
-- Tournament structure logic
-- Team registration
-- Tournament services
-
-**Typical Files**
-- Tournament services
-- Team services
-- Tournament controllers
-- Team models
-- Test Folder
-
----
+- `src/main/java/com/tournasys/controller/TournamentController.java`
+- `src/main/java/com/tournasys/controller/TeamController.java`
+- `src/main/java/com/tournasys/exception/DuplicateTeamException.java`
+- `src/main/java/com/tournasys/interfaces/Manageable.java`
+- `src/main/java/com/tournasys/model/Tournament.java`
+- `src/main/java/com/tournasys/model/Team.java`
+- `src/main/java/com/tournasys/repository/TournamentRepository.java`
+- `src/main/java/com/tournasys/repository/TeamRepository.java`
+- `src/main/java/com/tournasys/service/TournamentService.java`
+- `src/main/java/com/tournasys/service/TeamService.java`
+- `src/test/java/com/tournasys/TournamentModelTest.java`
+- `src/test/java/com/tournasys/TeamServiceTest.java`
+- `src/test/java/com/tournasys/MatchModelTest.java`
+- `src/test/java/com/tournasys/AuthenticationServiceTest.java`
+- `src/test/java/com/tournasys/StandingsModelTest.java`
 
 ## Shared Responsibilities
 

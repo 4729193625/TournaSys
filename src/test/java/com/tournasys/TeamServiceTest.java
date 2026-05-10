@@ -7,8 +7,11 @@ import org.junit.jupiter.api.Test;
 
 import com.tournasys.config.DatabaseConnection;
 import com.tournasys.exception.DuplicateTeamException;
+import com.tournasys.model.Manager;
+import com.tournasys.model.User;
 import com.tournasys.service.TeamService;
 import com.tournasys.service.TournamentService;
+import com.tournasys.util.SessionManager;
 
 public class TeamServiceTest {
 
@@ -18,6 +21,9 @@ public class TeamServiceTest {
 
         TournamentService tournamentService = new TournamentService();
         TeamService teamService = new TeamService();
+
+        User manager = new Manager(1, "manager1", "Test12345.");
+            SessionManager.login(manager);
 
         int tournamentId = tournamentService.createTournament("Test Cup", "League", 1);
 
@@ -33,6 +39,9 @@ public class TeamServiceTest {
 
         TournamentService tournamentService = new TournamentService();
         TeamService teamService = new TeamService();
+
+        User manager = new Manager(1, "manager1", "Test12345.");
+            SessionManager.login(manager);
 
         int tournamentId = tournamentService.createTournament("Duplicate Cup", "League", 1);
 
