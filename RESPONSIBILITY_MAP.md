@@ -91,6 +91,7 @@ Some infrastructure and configuration files are shared equally among all members
 - `pom.xml`
 - `README.md`
 - `.gitignore`
+- `RESPONSIBILITY_MAP.md`
 - Database configuration files
 - General utility classes
 - Application startup files
